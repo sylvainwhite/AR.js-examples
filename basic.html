@@ -27,10 +27,11 @@
     </a-marker>
 
     <a-marker type="pattern" url="data/ar.patt">
-        <a-sphere position="0 0.5 0" 
-               material="src: #coronavirus-flat; transparent: true; opacity: 0.95;"
-               animation__rotate = "property: rotation; dur: 8000; easing: linear; dir: normal; from:0 0 0; to: 0 360 0; loop: true;">
-        </a-sphere>     
+        <a-entity
+        gltf-model="images/scene.gltf"
+        scale="5 5 5"
+        position="50 150 0"
+      >
     </a-marker>
 
     <a-marker preset="hiro">
