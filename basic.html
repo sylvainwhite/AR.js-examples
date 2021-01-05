@@ -7,28 +7,20 @@
 
 <!--<script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>-->
+
 <body style="margin: 0px; overflow: hidden;">
   
 <!-- set detectionMode and matrixCodeType to enable barcode marker detection and custom pattern files -->
-
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
     <a-assets>
-		<img id="grid" src="images/border.png" />
-        <img id="earth-flat" src="images/earth-flat.jpg" />
-        <img id="coronavirus-flat" src="images/coronavirus5.jpg" />
-        <img id="coronavirus-flat1" src="images/coronavirus7.png" />
+        <img id="coronavirus" src="images/coronavirus7.png" />
         <img id="needle" src="images/needle1.png" />         
-		<img id="earth-sphere" src="images/earth-sphere.jpg" />
-        <!-- <a-mixin id="text"
-          text="align: center; width: 2;
-               value: Bonne annee Marc et Sophie"
-        ></a-mixin> -->
-      </a-assets>
+    </a-assets>
    
     <a-marker preset="hiro">
         <a-box position="0 0.5 0" 
-                material="src: #coronavirus-flat1; transparent: true; opacity: 0.95;">       
+                material="src: #coronavirus; transparent: true; opacity: 0.95;">       
         </a-box>   
     </a-marker>
 
@@ -39,12 +31,14 @@
     </a-marker>
 
     <a-marker type="pattern" url="data/ar.patt">
-        <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting. 
-        <a-plane color="white" rotation="-90 0 0" position="0 -0.25 0" width="3" material="transparent: true; opacity: 0.90"></a-plane> -->
-        <a-text value="aBonne annee \n Marc et Sophie" font="fonts/Exo2Bold.fnt" color="red" rotation="-90 0 0" align="center" width="2" scale="2 2 2"></a-text>
-    
-        <!-- <a-text mixin="text" font="fonts/Exo2Bold.fnt" color="red" rotation="-90 0 0" scale="2 2 2"></a-text> -->
-        <!-- <a-text mixin="text" position="0 0 0" wrap-count="20"></a-text> -->
+         <a-text value="Bonne annee! \n Marc et Sophie" 
+                font="fonts/Exo2Bold.fnt" 
+                color="red" 
+                rotation="-90 0 0" 
+                align="center" 
+                width="2" 
+                scale="2 2 2">
+        </a-text>
     </a-marker>
 
     <a-entity camera></a-entity>
