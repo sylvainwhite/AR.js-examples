@@ -20,7 +20,13 @@
         <img id="coronavirus-flat1" src="images/coronavirus7.png" />
         <img id="needle" src="images/needle1.png" />         
 		<img id="earth-sphere" src="images/earth-sphere.jpg" />
-	</a-assets>
+        <a-mixin id="text"
+          text="align: center; width: 6;
+               value: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam"
+        ></a-mixin>
+      </a-assets>
+
+      <a-text mixin="text" position="-3 0 0" wrap-count="20"></a-text>
     
     <a-marker type="pattern" url="data/letterA.patt">
         <a-box position="0 0.5 0" 
@@ -29,11 +35,11 @@
     </a-marker>
 
     <a-marker type="pattern" url="data/ar.patt">
-        <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting.  -->
+        <!-- positioning a plane directly below text for increased visibility; need to adjust position to avoid z-fighting. 
         <a-plane color="white" rotation="-90 0 0" position="0 -0.25 0" width="3" material="transparent: true; opacity: 0.90"></a-plane>
-
-        <!-- for more properties, see https://github.com/aframevr/aframe/blob/master/docs/components/text.md -->
-        <a-text value="Bonne annee <br/>Marc et Sophie!" font="fonts/Exo2Bold.fnt" color="red" rotation="-90 0 0" align="center" scale="2 2 2"></a-text>
+        <a-text value="Bonne annee <br/>Marc et Sophie!" font="fonts/Exo2Bold.fnt" color="red" rotation="-90 0 0" align="center" scale="2 2 2"></a-text> -->
+    
+        <a-text mixin="text" position="-3 0 0" wrap-count="20"></a-text>        
     </a-marker>
 
     <a-marker preset="hiro">
