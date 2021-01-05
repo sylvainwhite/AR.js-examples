@@ -24,8 +24,9 @@
     
     <a-marker type="pattern" url="data/letterA.patt">
         <a-plane position="0 0 0" 
-            material="src: #needle;">
-        </a-plane>   
+                 rotation="-90 0 0"
+               material="src: #needle;">
+        </a-plane>
     </a-marker>
 
     <a-marker type="pattern" url="data/ar.patt">
@@ -37,9 +38,13 @@
     </a-marker>
 
     <a-marker preset="hiro">
-        <a-box position="0 0.5 0" 
+        <!-- <a-box position="0 0.5 0" 
                 material="src: #coronavirus-flat1; transparent: true; opacity: 0.95;">       
-        </a-box>
+        </a-box> -->
+        <a-plane position="0 0 0" 
+                 rotation="-90 0 0"
+                 material="src: #coronavirus-flat1; transparent: true; opacity: 0.95;">
+        </a-plane>        
     </a-marker>
     
     <a-entity camera></a-entity>
