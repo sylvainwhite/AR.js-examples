@@ -25,9 +25,13 @@
                value: Bonne annee Marc et Sophie"
         ></a-mixin>
       </a-assets>
+   
+    <a-marker preset="hiro">
+        <a-box position="0 0.5 0" 
+                material="src: #coronavirus-flat1; transparent: true; opacity: 0.95;">       
+        </a-box>   
+    </a-marker>
 
-      <a-text mixin="text" position="-3 0 0" wrap-count="20"></a-text>
-    
     <a-marker type="pattern" url="data/letterA.patt">
         <a-box position="0 0.5 0" 
                 material="src: #needle; transparent: true; opacity: 0.95;">       
@@ -43,12 +47,6 @@
         <!-- <a-text mixin="text" position="0 0 0" wrap-count="20"></a-text> -->
     </a-marker>
 
-    <a-marker preset="hiro">
-        <a-box position="0 0.5 0" 
-                material="src: #coronavirus-flat1; transparent: true; opacity: 0.95;">       
-        </a-box>   
-    </a-marker>
-    
     <a-entity camera></a-entity>
     
 </a-scene>
