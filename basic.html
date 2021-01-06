@@ -19,26 +19,11 @@
     </a-assets>
    
     <a-marker type="pattern" url="data/ar.patt">
-        <!-- <a-box position="0 0.5 0" 
-                material="src: #coronavirus; transparent: true; opacity: 0.95;">       
-        </a-box> -->  
-        <!-- <a-box material="src: #coronavirus; transparent: true; opacity: 0.95;"></a-box> -->
         <a-box id="arBox" src="#coronavirus" 
             transparent="true"
             opacity="0.95">
         </a-box>
     </a-marker>
-
-    <!-- <a-marker type="pattern" url="data/letterA.patt"> -->
-        <!-- <a-box position="0 0.5 0" 
-                material="src: #needle; transparent: true; opacity: 0.95;">       
-        </a-box> --> 
-        <!-- <a-box material="src: #needle; transparent: true; opacity: 0.95;"></a-box> -->
-        <!-- <a-box src="#needle" 
-            transparent="true" 
-            opacity="0.95">
-        </a-box>
-    </a-marker> -->
 
     <a-marker type="pattern" url="data/letterA.patt">
          <a-text value="Bonne annee! \n Michel4" 
@@ -58,7 +43,6 @@
 
 <script type="text/javascript">
     function onTimerElapsed() {
-        alert("Hello! I am an alert box!!");
         let arBox = document.querySelector('#arBox');
         if (arBox) {
             arBox.setAttribute('src', '#needle');
