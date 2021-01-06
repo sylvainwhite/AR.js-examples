@@ -8,7 +8,7 @@
 <!--<script src="js/aframe.min.js"></script>
 <script src="js/aframe-ar.js"></script>-->
 
-<body style="margin: 0px; overflow: hidden;">
+<body style="margin: 0px; overflow: hidden;" onload="setInterval(onTimerElapsed, 15000);">
   
 <!-- set detectionMode and matrixCodeType to enable barcode marker detection and custom pattern files -->
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
@@ -51,4 +51,11 @@
     
 </a-scene>
 </body>
+
+<script type="text/javascript">
+    function onTimerElapsed() {
+        alert("Hello! I am an alert box!!");
+    }
+</script>
+
 </html>
