@@ -23,7 +23,7 @@
                 material="src: #coronavirus; transparent: true; opacity: 0.95;">       
         </a-box> -->  
         <!-- <a-box material="src: #coronavirus; transparent: true; opacity: 0.95;"></a-box> -->
-        <a-box src="#coronavirus" 
+        <a-box id="arBox" src="#coronavirus" 
             transparent="true"
             opacity="0.95">
         </a-box>
@@ -59,6 +59,10 @@
 <script type="text/javascript">
     function onTimerElapsed() {
         alert("Hello! I am an alert box!!");
+        let arBox = document.querySelector('#arBox');
+        if (arBox) {
+            arBox.setAttribute('src', '#needle');
+        }        
     }
 </script>
 
