@@ -5,10 +5,7 @@
 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
-<!--<script src="js/aframe.min.js"></script>
-<script src="js/aframe-ar.js"></script>-->
-
-<body style="margin: 0px; overflow: hidden;" onload="setInterval(onTimerElapsed, 15000);">
+<body style="margin: 0px; overflow: hidden;">
   
 <!-- set detectionMode and matrixCodeType to enable barcode marker detection and custom pattern files -->
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
@@ -18,33 +15,11 @@
         <img id="needle" src="images/needle1.png"/>         
     </a-assets>
    
-    <!-- <a-marker type="pattern" url="data/letterF.patt">
-        <a-box id="arBox" src="#needle" 
-            transparent="true"
-            opacity="0.95">
-        </a-box>
-    </a-marker> -->
-
-    <!-- <a-marker preset="hiro">
-        <a-box id="arBox" src="#coronavirus" 
-            transparent="true"
-            opacity="0.95">
-        </a-box>
-    </a-marker> -->
-
     <a-marker type="pattern" url="data/letterA.patt">
         <a-box id="arBox" src="#coronavirus" 
         transparent="true"
         opacity="0.95">
         </a-box>
-        <!-- <a-text value="Bonne annee! \n Michel2" 
-                font="fonts/Exo2Bold.fnt" 
-                color="red" 
-                rotation="-90 0 0" 
-                align="center" 
-                width="2" 
-                scale="2 2 2">
-        </a-text> -->
     </a-marker>
 
     <a-marker type="pattern" url="data/letterF.patt">
@@ -52,14 +27,6 @@
         transparent="true"
         opacity="0.95">
         </a-box>
-        <!-- <a-text value="Bonne annee! \n Martine2"
-               font="fonts/Exo2Bold.fnt" 
-               color="red" 
-               rotation="-90 0 0" 
-               align="center" 
-               width="2" 
-               scale="2 2 2">
-       </a-text> -->
     </a-marker> 
 
     <a-marker type="pattern" url="data/letterQ.patt">
@@ -77,14 +44,5 @@
     
 </a-scene>
 </body>
-
-<script type="text/javascript">
-    function onTimerElapsed() {
-        // let arBox = document.querySelector('#arBox');
-        // if (arBox) {
-        //     arBox.setAttribute('src', '#needle');
-        // }        
-    }
-</script>
 
 </html>
