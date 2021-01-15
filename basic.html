@@ -36,6 +36,17 @@
         </a-text>
     </a-marker>
 
+    <a-marker type="pattern" url="data/letterC.patt">
+        <a-text value="Bonne annee! \n Martine1" 
+               font="fonts/Exo2Bold.fnt" 
+               color="red" 
+               rotation="-90 0 0" 
+               align="center" 
+               width="2" 
+               scale="2 2 2">
+       </a-text>
+   </a-marker>    
+
     <a-entity camera></a-entity>
     
 </a-scene>
@@ -43,10 +54,10 @@
 
 <script type="text/javascript">
     function onTimerElapsed() {
-        let arBox = document.querySelector('#arBox');
-        if (arBox) {
-            arBox.setAttribute('src', '#needle');
-        }        
+        // let arBox = document.querySelector('#arBox');
+        // if (arBox) {
+        //     arBox.setAttribute('src', '#needle');
+        // }        
     }
 </script>
 
