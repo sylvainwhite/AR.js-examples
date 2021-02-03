@@ -5,8 +5,36 @@
 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
-<body style="margin: 0px; overflow: hidden;">
+<body style="margin: 0px; overflow: hidden;" onload="onLoadFunction()">
   
+<script type="text/javascript">
+    function onLoadFunction() {
+
+        // Get id value
+        let queryString = window.location.search.substring(1);
+        let urlParams = new URLSearchParams(queryString);
+        let id = urlParams.get('id') || '';
+
+        // Get name from id value
+        let map = new Map([
+            ["m1", "Michel"], 
+            ["m2", "René"],
+            ["m3", "Sophie et Séb"]
+        ]);
+        let name = map.get(id);
+
+        // Build message
+        let fMessage = "Bonne année 2021" +(name ? '\n' + name : '') + "!"  
+
+        // Set message
+        let ftext = document.querySelector('#ftext');
+        if (ftext) {
+
+            ftext.setAttribute('value', 'Bonne annee 2021 "');
+        }        
+    }
+</script>
+
 <!-- set detectionMode and matrixCodeType to enable barcode marker detection and custom pattern files -->
 <a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
@@ -30,7 +58,7 @@
     </a-marker> 
 
     <a-marker type="pattern" url="data/letterF.patt">
-        <a-text value="Bonne annee! \n LucieInTheSky-3" 
+        <a-text id="ftext" value="Bonne annee 2021!"
                font="fonts/Exo2Bold.fnt" 
                color="red" 
                rotation="-90 0 0" 
