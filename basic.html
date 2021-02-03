@@ -11,7 +11,7 @@
     function onLoadFunction() {
 
         // Get id value
-        let queryString = window.location.search.substring(1);
+        let queryString = window.location.search;
         let urlParams = new URLSearchParams(queryString);
         let id = urlParams.get('id') || '';
 
@@ -24,13 +24,13 @@
         let name = map.get(id);
 
         // Build message
-        let fMessage = "Bonne année 2021" +(name ? '\n' + name : '') + "!"  
+        let fMessage = "Bonne année 2021" + (name ? '\n' + name : '') + "!"  
 
         // Set message
         let ftext = document.querySelector('#ftext');
         if (ftext) {
 
-            ftext.setAttribute('value', 'Bonne annee 2021 "');
+            ftext.setAttribute('value', fMessage);
         }        
     }
 </script>
