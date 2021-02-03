@@ -18,13 +18,19 @@
         // Get name from id value
         let map = new Map([
             ["m1", "Michel"], 
-            ["m2", "René"],
-            ["m3", "Sophie et Séb"]
+            ["m2", "Rene"],
+            ["m3", "Sophie et Seb"],
+            ["m4", "Julie"], 
+            ["m5", "Charles-Hugo"],
+            ["m6", "Clement"],
+            ["m7", "Bernard"], 
+            ["m8", "Marc"],
+            ["m9", "Peter et Angel"]            
         ]);
         let name = map.get(id);
 
         // Build message
-        let fMessage = "Bonne année 2021" + (name ? '\n' + name : '') + "!"  
+        let fMessage = "Bonne annee 2021" + (name ? '\n' + name : '') + "!"  
 
         // Set message
         let ftext = document.querySelector('#ftext');
